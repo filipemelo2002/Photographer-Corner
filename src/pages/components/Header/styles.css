@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:700|Poppins&display=swap');
+
+.menu{
+    padding: 20px;
+    width: auto;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
+h1>strong{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
+
+@media (max-width: 500px){
+    h1{
+        font-size: 1.7rem;
+    }
+}
+@media (max-width: 430px){
+    h1{
+        font-size: 1.3rem;
+    }
+}
