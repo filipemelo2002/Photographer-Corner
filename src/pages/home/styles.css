@@ -1,6 +1,39 @@
-.container{
-    width: 70%;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+.content{
+    width: 100%;
     align-self: center;
     display: flex;
     flex-direction: column;
+}
+
+.aboutMe{
+    background: #393E4690;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+}
+.aboutMe>div{
+    border: 5px solid #FF7700;
+    width: 120px;
+    min-height: 120px;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 2rem;
+    line-height: 1.7rem;
+}
+.aboutMe>p{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #fff;
+    max-width: 500px;
+    text-align: justify;
+    padding: 7px;
+    font-size: 16px;
 }
