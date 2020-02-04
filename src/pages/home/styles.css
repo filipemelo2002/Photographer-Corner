@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand&display=swap');
 .content{
     width: 100%;
     align-self: center;
@@ -38,36 +39,71 @@
     font-size: 16px;
 }
 
-.floatingCards{
-    width: 100%;
-    display: flex;
+.imagesWall{
+    display:flex;
     flex-direction: row;
-    padding: 20px;
-    margin-top: 20px;
-    justify-content: space-evenly;
-}
-.floatingCards>.floatCard{
-    background-color: #fff;
-    padding: 30px;
-    display: flex;
-    min-height: 200px;
-    flex-direction: column;
-    cursor: pointer;
     align-items: center;
-    text-align: justify;
-    border-radius: 10px;
-    box-shadow: #000 1px 1px 3px;
-    transition: box-shadow ease-in 0.2s;
+    justify-content: space-evenly;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+.imagesWall>.imageFrame{
+    background-color: #FFF;
+    width: 236px;
+    padding: 15px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    -webkit-box-shadow: 11px 11px 13px -13px rgba(0,0,0,0.89);
+    -moz-box-shadow: 11px 11px 13px -13px rgba(0,0,0,0.89);
+    box-shadow: 11px 11px 13px -13px rgba(0,0,0,0.89);
+    transform: rotate(-1deg);
     transition: transform ease-in 0.2s;
-} 
-.floatingCards>.floatCard:hover{
-    box-shadow: #000 1px 1px 10px;
-    transform: scale(1.1,1.1);
+    cursor: pointer;
 }
-.floatingCards>.floatCard>img{
-    width: 70px;
-    height: 70px;
+.imagesWall>.imageFrame:hover{
+    transform: scale(1.07,1.07);
 }
-.floatingCards>.floatCard>p{
-    margin-top: 20px;
+.imagesWall>.imageFrame>img{
+    width: 210px;
+    height: 210px;
+}
+.imagesWall>.imageFrame>p{
+    font-family: 'Just Another Hand', cursive;
+    color: #272727;
+    margin-top: 10px;
+    font-size: 35px;
+}
+
+@media (max-width:1300px){
+    .imagesWall{
+        display:grid;
+        row-gap: 15px;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+    } 
+}
+
+@media(max-width: 1060px){
+    .imagesWall{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 800px){
+    .imagesWall{
+        grid-template-columns: 2fr 2fr;
+    }
+}
+@media (max-width: 550px){
+    .imagesWall{
+        grid-template-columns: 1fr;
+        row-gap: 130px;
+    }
+    .imagesWall>.imageFrame{
+        transform: scale(1.3,1.3);
+    }
+    .imagesWall>.imageFrame:hover{
+        transform: scale(1.37,1.37);
+    }
 }
