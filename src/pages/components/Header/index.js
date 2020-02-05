@@ -1,5 +1,5 @@
 import React from 'react'
-import {Navbar, Nav, Form, Button} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 
 import './styles.css'
 export default function Header(){
@@ -13,9 +13,7 @@ export default function Header(){
                     <Nav.Link href="#eventos">Outros Eventos</Nav.Link>
                     <Nav.Link href="#wallpapers">Wallpapers</Nav.Link>
                 </Nav>
-                <Form inline>
-                    <Button variant="outline-primary">Agende agora</Button>
-                </Form>
+                
             </Navbar.Collapse>
         </Navbar>
     )
