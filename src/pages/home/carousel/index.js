@@ -1,6 +1,8 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
-import img from './img/img.jpg'
+import img1 from './img/img1.jpeg'
+import img2 from './img/img2.jpeg'
+import img3 from './img/img3.jpeg'
 export default function Caurousel(){
     return (
         <Carousel>
@@ -10,15 +12,14 @@ export default function Caurousel(){
                         }}>
                     <img
                         className="d-block   w-100"
-                        src={img}
+                        src={img1}
                         
                         alt="First slide"
                         fluid
                     />
                 </div>
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Viva intensamente</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -27,15 +28,14 @@ export default function Caurousel(){
                         }}>
                     <img
                         className="d-block   w-100"
-                        src={img}
+                        src={img2}
                         
                         alt="First slide"
                         fluid
                     />
                 </div>
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Eternize momentos</h3>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -44,32 +44,15 @@ export default function Caurousel(){
                         }}>
                     <img
                         className="d-block   w-100"
-                        src={img}
+                        src={img3}
                         
                         alt="First slide"
                         fluid
                     />
                 </div>
+
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <div style={{
-                            maxHeight:'580px'
-                        }}>
-                    <img
-                        className="d-block   w-100"
-                        src={img}
-                        
-                        alt="First slide"
-                        fluid
-                    />
-                </div>
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <h3>Guarde as recordações</h3>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
