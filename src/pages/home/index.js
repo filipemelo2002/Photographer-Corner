@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles.css'
 import Carousel from './carousel'
-import avatar from './img/avatar.png'
+import avatar from './img/avatar.jpeg'
 import illustration from './img/illustration.png'
 
 import {FaCamera} from 'react-icons/fa'
@@ -25,15 +25,10 @@ return (
                         Ao fotografar eu sinto alegria em saber que estou fazendo o que eu gosto. Sempre fui grato a Deus por tudo o que Ele fez na minha vida e também sou grato pelo imenso prazer de tirar fotos.
                     </p>
                     <p>
-                        Sou formado em Fotografia Digital pelo instituto GINEAD e em Photoshop pela Prime Cursos. Especializado em retratos, porque eu acredito na combinação ideal entre a fotografia e as pessoas. Representar cada olhar, cada expressão, cada sentimento faz parte do meu trabalho. Eu acredito também que a fotografia pra mim é o trabalho que exemplifica a frase de Confúcio: 
-                        <blockquote className="blockquote mb-0">
-                            <p>
-                                {' '}“Escolha um trabalho que você ama e você nunca terá que trabalhar um dia sequer na vida.”{' '}
-                            </p>
-                            <footer className="blockquote-footer">
-                                Confúcio
-                            </footer>
-                        </blockquote>
+                        Sou formado em Fotografia Digital pelo instituto GINEAD e em Photoshop pela Prime Cursos. Especializado em retratos, porque eu acredito na combinação ideal entre a fotografia e as pessoas. Representar cada olhar, cada expressão, cada sentimento faz parte do meu trabalho. Eu acredito também que a fotografia pra mim é o trabalho que exemplifica a frase de Confúcio:  
+                        <span>
+                            “Escolha um trabalho que você ama e você nunca terá que trabalhar um dia sequer na vida.”
+                        </span>
                     </p>
                     <p>
                         Desafios me motivam e não desisto tão fácil dos meus objetivos. E sobre fotografia... nunca é só um click, sempre conseguimos experiências novas e incomparáveis.
