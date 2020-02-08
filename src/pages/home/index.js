@@ -44,6 +44,36 @@ return (
                 <img src={illustration} id="illustration" alt="about-me-avatar"/>
             </div>
         </div>
+        <div className="peoplesThoughts">
+            <h3>O que dizem sobre meu trabalho</h3>
+            <div className="cardPersonGroup">
+                <div className="cardPerson">
+                    <section>
+                        <p>"Gerson, passando para agradecer pelo trabalho maravilhoso. Você foi super paciente, cheio de ideias e poses para as melhores fotos, super recomendo seu trabalho."</p>
+                    </section>
+                    <footer>
+                        <p>- Franciele Luna</p>
+                    </footer>
+                </div>
+                <div className="cardPerson">
+                    <section>
+                        <p>"Gerson, passando para agradecer pelo trabalho maravilhoso. Você foi super paciente, cheio de ideias e poses para as melhores fotos, super recomendo seu trabalho."</p>
+                    </section>
+                    <footer>
+                        <p>- Franciele Luna</p>
+                    </footer>
+                </div>
+                <div className="cardPerson">
+                    <section>
+                        <p>"Gerson, passando para agradecer pelo trabalho maravilhoso. Você foi super paciente, cheio de ideias e poses para as melhores fotos, super recomendo seu trabalho."</p>
+                    </section>
+                    <footer>
+                        <p>- Franciele Luna</p>
+                    </footer>
+                </div>
+            </div>
+            
+        </div>
         
     </div>  
     )
