@@ -48,6 +48,50 @@
 .aboutMe>section>p>span{
     font-family: 'PT Serif', serif;
 }
+
+.peoplesThoughts{
+    padding: 30px;
+    display:flex;
+    margin-top: 100px;
+    flex-direction: column;
+    background-color: #414141;
+    color: white;   
+}
+
+.peoplesThoughts>h3{
+    text-align: center;
+}
+
+.peoplesThoughts>.cardPersonGroup{
+    width: 100%;
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.peoplesThoughts>.cardPersonGroup>.cardPerson{
+    background-color: #fff;
+    padding: 20px;
+    max-width: 300px;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+.cardPerson>section>p{
+    font-family: 'PT Serif', serif;
+    text-align: justify;
+}
+.cardPerson>footer>p{
+    color: rgb(37, 107, 107);
+    font-style: italic;
+}
+
+@media (max-width: 500px){
+    .peoplesThoughts>.cardPersonGroup{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
 @media (max-width: 1200px){
     .illustration{
        display: none;
