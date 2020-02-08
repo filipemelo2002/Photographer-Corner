@@ -3,6 +3,8 @@ import Carousel from 'react-bootstrap/Carousel'
 import img1 from './img/img1.jpeg'
 import img2 from './img/img2.jpeg'
 import img3 from './img/img3.jpeg'
+
+import './styles.css'
 export default function Caurousel(){
     return (
         <Carousel>
@@ -18,8 +20,8 @@ export default function Caurousel(){
                         fluid
                     />
                 </div>
-                <Carousel.Caption>
-                    <h3>Viva intensamente</h3>
+                <Carousel.Caption className="captionItem">
+                    <h3>Viva intensamente</h3>  
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -34,8 +36,8 @@ export default function Caurousel(){
                         fluid
                     />
                 </div>
-                <Carousel.Caption>
-                    <h3>Eternize momentos</h3>
+                <Carousel.Caption className="captionItem">
+                    <h3>Eternize momentos</h3>  
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -50,9 +52,8 @@ export default function Caurousel(){
                         fluid
                     />
                 </div>
-
-                <Carousel.Caption>
-                    <h3>Guarde as recordações</h3>
+                <Carousel.Caption className="captionItem">
+                    <h3>Guarde as recordações</h3>  
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

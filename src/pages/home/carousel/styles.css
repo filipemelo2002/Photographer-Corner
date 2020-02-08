@@ -1,0 +1,10 @@
+.captionItem{
+    padding: 5px;
+    background-color: #1a1a1a95;
+}
+
+@media (min-width:700px){
+    .captionItem>h3{
+        font-size: 3rem;
+    }
+}
