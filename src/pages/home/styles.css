@@ -68,12 +68,13 @@
     margin-top: 30px;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    column-gap: 12px;
 }
 
 .peoplesThoughts>.cardPersonGroup>.cardPerson{
     background-color: #fff;
     padding: 20px;
-    max-width: 300px;
+    padding-left: 30px;
     color: rgb(51, 51, 51);
     cursor: pointer;
 }
@@ -86,10 +87,36 @@
     font-style: italic;
 }
 
+
+.footer{
+    padding: 30px;
+    display:flex;
+    padding-top: 200px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 50px;
+    background-color: #414141;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer>a{
+    color:#fff;
+}
+.footer>a>span{
+    font-size: 20px;
+}
 @media (max-width: 500px){
     .peoplesThoughts>.cardPersonGroup{
         grid-template-columns: 1fr;
         row-gap: 20px;
+    }
+
+}
+@media(max-width:950px){
+    .footer>a>span{
+        display: none;
     }
 }
 @media (max-width: 1200px){
