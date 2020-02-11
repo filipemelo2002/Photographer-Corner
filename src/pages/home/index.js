@@ -5,8 +5,7 @@ import Carousel from './carousel'
 import avatar from './img/avatar.jpeg'
 import illustration from './img/illustration.png'
 
-import {FaCamera, FaWhatsapp, FaInstagram} from 'react-icons/fa'
-import {MdMail} from 'react-icons/md'
+import {FaCamera} from 'react-icons/fa'
 import {Button} from 'react-bootstrap'
 
 export default function Home(){
@@ -66,21 +65,15 @@ return (
                 </div>
                 <div className="cardPerson">
                     <section>
-                        <p>"Gerson, passando para agradecer pelo trabalho maravilhoso. Você foi super paciente, cheio de ideias e poses para as melhores fotos, super recomendo seu trabalho."</p>
+                        <p>"Amei o ensaio, Gerson. Você foi muito paciente e detalhista. Parabéns pelo seu trabalho!!!"</p>
                     </section>
                     <footer>
-                        <p>- Franciele Luna</p>
+                        <p>- Tarcila Melo</p>
                     </footer>
                 </div>
             </div>
             
         </div>
-        <div className="footer">
-            <a href="https://www.instagram.com/gersonvaz_fotografia/" rel="noopener noreferrer" target="_blank"><FaInstagram className="icon"/><span>@gersonvaz_fotografia</span></a>
-            <a href="tel:+558181984132034"><FaWhatsapp className="icon"/><span>(81) 98413-2034</span></a>
-            <a href="mailto:gersonvazfotografia@gmail.com"><MdMail className="icon"/><span>gersonvazfotografia@gmail.com</span></a>
-        </div>
-        
     </div>  
     )
 }
