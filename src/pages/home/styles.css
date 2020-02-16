@@ -46,7 +46,8 @@
     font-family: 'Raleway', sans-serif;
 }
 .aboutMe>section>p>span{
-    font-family: 'PT Serif', serif;
+    font-style: italic;
+    padding-left: 7px;
 }
 
 .peoplesThoughts{
