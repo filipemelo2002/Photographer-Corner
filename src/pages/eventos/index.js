@@ -2,7 +2,9 @@ import React, {useState, useEffect} from 'react'
 
 import Spinner from 'react-bootstrap/Spinner'
 import GalleryList from '../components/GalleryList'
+import Header from '../components/Header'
 
+import Footer from '../components/Contact'
 import './styles.css'
 
 export default function Eventos(){
@@ -28,10 +30,14 @@ export default function Eventos(){
     }, [])
 
     return (
+        <>
+        <Header/>
         <div className="galeryContent">
             <h1>Eventos</h1>
             <Spinner animation="grow" className="loadingIndicator" style={{display: display}}/>
             <GalleryList images={imgs}/>
         </div>
+        <Footer/>
+        </>
     )
 }

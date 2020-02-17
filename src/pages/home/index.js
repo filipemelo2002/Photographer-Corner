@@ -8,9 +8,15 @@ import illustration from './img/illustration.png'
 import {FaCamera} from 'react-icons/fa'
 import {Button} from 'react-bootstrap'
 
+import Header from '../components/Header'
+
+import Footer from '../components/Contact'
+
 export default function Home(){
 
 return (
+    <>
+    <Header />
     <div className="content">
         <Carousel/>
         <div className="aboutSection">
@@ -74,6 +80,8 @@ return (
             </div>
             
         </div>
-    </div>  
+    </div>
+    <Footer /> 
+    </> 
     )
 }
