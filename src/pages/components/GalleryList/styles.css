@@ -1,4 +1,27 @@
+.fullScreenFrame{
+    background-color: #27282b95;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+}
 
+.fullScreenFrame>img{
+    max-width: 900px;
+}
+@media (max-width: 1200px){
+    .fullScreenFrame>img{
+        width: 70%;
+    }
+}
+@media (max-width: 900px){
+    .fullScreenFrame>img{
+        width: 100%;
+    }
+}
 .gallery{
     margin-top: 50px;
     display:grid;
@@ -11,25 +34,26 @@
     width:350px;
     background-position: center;
     background-size: cover;
-    cursor: pointer;
     background-repeat: no-repeat;
     position: relative;
 }
 .addFrame{
     background-color: #373940;
-    position: relative;
     color: white;
     width: 100%;
+    display: flex;
+    align-items: center;
     text-align: center;
-    height:100%;
+    justify-content: center;
     cursor: pointer;
+    height: 100%;
     transition: background-color ease-in 0.2s;
 }
 .addFrame:hover{
     background-color: #27282b;
 }
 .imgFrame>div{
-    background-color: #e2111170;
+    background-color: #2b79a770;
     color: white;
     position: absolute;
     top: 0;
@@ -38,11 +62,18 @@
     text-align: center;
     height:100%;
     opacity: 0;
+    align-items: center;
+    justify-content: center;
     transition: opacity ease-in 0.2s;
+    display: flex;
 }
-.deleteIcon, .addIcon{
+.actionIcon{
     font-size: 100px;
-    margin-top: 25%;
+    cursor: pointer;
+    align-self: center;
+}
+.deleteIcon{
+    font-size: 70px;
 }
 
 .imgFrame>div:hover{
