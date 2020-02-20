@@ -8,17 +8,34 @@
     width: 100%;
     top: 0;
 }
-
-.fullScreenFrame>img{
+.fullScreenFrame>div{
+    position: relative;
+    display: inline-block;
+}
+.fullScreenFrame>div>span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 50px;
+    height:50px;
+    padding: 10px;
+    background: #00000097;
+    cursor: pointer;
+}
+.fullScreenFrame>div>img{
     max-width: 900px;
 }
 @media (max-width: 1200px){
-    .fullScreenFrame>img{
+    .fullScreenFrame>div>img{
         width: 70%;
     }
 }
 @media (max-width: 900px){
-    .fullScreenFrame>img{
+    .fullScreenFrame>div>img{
         width: 100%;
     }
 }
@@ -41,6 +58,8 @@
     background-color: #373940;
     color: white;
     width: 100%;
+    min-width: 350px;
+    min-height: 230px;
     display: flex;
     align-items: center;
     text-align: center;
