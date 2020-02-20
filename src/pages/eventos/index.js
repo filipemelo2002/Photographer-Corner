@@ -18,9 +18,6 @@ export default function Eventos(){
                 return r.keys().map(r);
             }
             const images = importAll(require.context('./img', true, /\.(png|jpe?g|svg|jpg)$/))
-            for(var i=0; i<19; i++){
-                images.push(images[0])
-            }
             if(images){
                 setImgs(images)
                 setDisplay('none')
