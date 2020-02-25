@@ -5,7 +5,7 @@ import Home from './pages/home'
 import Ensaios from './pages/ensaios'
 import Eventos from './pages/eventos'
 import Wallpapers from './pages/wallpapers'
-
+import Admin from './pages/admin'
 export default function Routes (){
     return (
         <BrowserRouter>
@@ -14,6 +14,7 @@ export default function Routes (){
                 <Route exact path="/ensaios" component={Ensaios}/> 
                 <Route exact path="/eventos" component={Eventos}/>
                 <Route exact path="/wallpapers" component={Wallpapers}/> 
+                <Route exact path="/admin" component={Admin}/>
             </Switch>
         </BrowserRouter>
     )
