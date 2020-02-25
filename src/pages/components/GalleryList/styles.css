@@ -28,6 +28,7 @@
 }
 .fullScreenFrame>div>img{
     max-width: 900px;
+    max-height: 700px;
 }
 @media (max-width: 1200px){
     .fullScreenFrame>div>img{
