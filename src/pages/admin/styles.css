@@ -1,0 +1,41 @@
+.loginFormBody{
+    background-color:#ececec;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.loginFields{
+    max-width: 500px;
+    margin: 10% auto;
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+    padding-top: 80px;
+    border-radius: 15px;
+    box-shadow: #00000050 0px 0px 10px 1px;
+}
+.adminAvatar{
+    position: absolute;
+    top: -75px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    align-self: center;
+    width: 150px;
+    height:150px;
+    background-color: #2e2e2e;
+    font-size: 70px;
+    border-radius: 100%;
+    color:white;
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #00000080 0px 0px 10px 1px;
+}
+.adminAvatar>.avatar{
+    align-self: center;
+}
