@@ -2,9 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import Spinner from 'react-bootstrap/Spinner'
 import GalleryList from '../components/GalleryList'
-import Header from '../components/Header'
 
-import Footer from '../components/Contact'
 import './styles.css'
 
 export default function Ensaios(){
@@ -28,13 +26,12 @@ export default function Ensaios(){
 
     return (
         <>
-        <Header />
+       
         <div className="galeryContent">
             <h1>Ensaios externos</h1>
             <Spinner animation="grow" className="loadingIndicator" style={{display: display}}/>
             <GalleryList images={imgs}/>
         </div>
-        <Footer />
         </>
     )
 }
