@@ -39,3 +39,14 @@
 .adminAvatar>.avatar{
     align-self: center;
 }
+@media (max-width:870px){
+    .loginFields{
+        margin-top: 150px;
+    }
+}
+
+@media (max-width:570px){
+    .loginFields{
+        max-width: 90%;
+    }
+}
