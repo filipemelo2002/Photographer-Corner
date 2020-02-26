@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import {Form, Button, Alert} from 'react-bootstrap'
 
-
+import api from './service/api'
 import {FaCamera, FaUserCog} from 'react-icons/fa'
 import './styles.css'
 export default function Admin(){
@@ -12,11 +12,15 @@ export default function Admin(){
     const [alertMessage, setMessage] = useState('')
     const [user, setUser] = useState('')
     const [pass, setPass] = useState('')
-    function handleSignIn(){
+    async function handleSignIn(){
         if(user.length ===0 || pass.length===0){
             setVariant("warning")
             setMessage("Ops!! Por favor, preencha todos os campos ;)")
             setAlertVisible('block')
+        }else{
+            
+            const response = await api.post('/admin',{user, pass})
+            console.log(response.data)
         }
         
     }
