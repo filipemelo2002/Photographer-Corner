@@ -17,7 +17,6 @@ export default function Caurousel(){
                         src={img1}
                         
                         alt="First slide"
-                        fluid
                     />
                 </div>
                 <Carousel.Caption className="captionItem">
@@ -33,7 +32,6 @@ export default function Caurousel(){
                         src={img2}
                         
                         alt="First slide"
-                        fluid
                     />
                 </div>
                 <Carousel.Caption className="captionItem">
@@ -49,7 +47,6 @@ export default function Caurousel(){
                         src={img3}
                         
                         alt="First slide"
-                        fluid
                     />
                 </div>
                 <Carousel.Caption className="captionItem">
