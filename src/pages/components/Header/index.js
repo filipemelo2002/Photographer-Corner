@@ -1,6 +1,6 @@
 import React from 'react'
 import {Navbar, Nav, Form, Button} from 'react-bootstrap'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import './styles.css'
  function Header(){
     return (
@@ -9,12 +9,12 @@ import './styles.css'
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link><NavLink to="/ensaios" className="d-inline p-2 text-black-50">Ensaios Externos</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to="/eventos" className="d-inline p-2 text-black-50">Outros eventos</NavLink></Nav.Link>
-                    <Nav.Link><NavLink to="/wallpapers" className="d-inline p-2 text-black-50">Wallpapers</NavLink></Nav.Link>
+                    <Nav.Link to="/ensaios" as={Link}>Ensaios Externos</Nav.Link>
+                    <Nav.Link to="/eventos" as={Link}>Outros Eventos</Nav.Link>
+                    <Nav.Link to="/wallpapers" as={Link}>Wallpapers</Nav.Link>
                 </Nav>
                 <Form inline>
-                    <Button variant="dark" type='submit'><NavLink to="/admin" className="d-inline p-2 text-white" style={{textDecoration:'none'}}>Administrador</NavLink></Button>
+                    <Button variant="dark" as={Link} to="/admin">Administrador</Button>
                 </Form>
             </Navbar.Collapse>
         </Navbar>
