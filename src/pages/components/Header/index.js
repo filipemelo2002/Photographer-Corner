@@ -14,7 +14,7 @@ import './styles.css'
                     <Nav.Link to="/wallpapers" as={Link}>Wallpapers</Nav.Link>
                 </Nav>
                 <Form inline>
-                    <Button variant="dark" as={Link} to="/admin">Administrador</Button>
+                    <Button variant="outline-dark" as={Link} to="/admin">Administrador</Button>
                 </Form>
             </Navbar.Collapse>
         </Navbar>
