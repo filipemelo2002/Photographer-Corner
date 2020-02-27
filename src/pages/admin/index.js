@@ -43,7 +43,7 @@ export default function Admin(){
                             <Form.Label>Usuário</Form.Label>
                             <Form.Control type="text" required={true} value={user} onChange={event=>setUser(event.target.value)}/>
                         </Form.Group>
-                        <Form.Group controlId="user">
+                        <Form.Group controlId="pass">
                             <Form.Label>Senha</Form.Label>
                             <Form.Control type="password" required={true} value={pass} onChange={event=>setPass(event.target.value)}/>
                         </Form.Group>
