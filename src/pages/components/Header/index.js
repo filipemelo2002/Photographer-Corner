@@ -1,8 +1,30 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Navbar, Nav, Form, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import './styles.css'
- function Header(){
+
+
+export default function Header(){
+    const [name, setName] = useState('Administrador')
+    const [buttonType, setButtonType] = useState('outline-dark')
+    function handleButtonClick(){
+        if(localStorage.getItem('name')){
+            localStorage.clear()
+            buttonStyles()
+        }
+    }
+    function buttonStyles(){
+        if(localStorage.getItem('name')){
+            setName('Sair')
+            setButtonType('outline-danger')
+        }else{
+            setName('Administrador')
+            setButtonType('outline-dark')
+        }
+    }
+    useEffect(()=>{
+        buttonStyles()
+    },[])
     return (
         <Navbar  bg="light" collapseOnSelect expand="lg" className="menu">
             <Navbar.Brand href="/" className="brand">Gerson Vaz <strong>Fotografia</strong></Navbar.Brand>
@@ -14,10 +36,16 @@ import './styles.css'
                     <Nav.Link to="/wallpapers" as={Link}>Wallpapers</Nav.Link>
                 </Nav>
                 <Form inline>
-                    <Button variant="outline-dark" as={Link} to="/admin">Administrador</Button>
+                    <Button variant={buttonType}
+                        as={Link}
+                        to='/admin'
+                            onClick={()=>handleButtonClick()}
+                        >
+                            {name}
+                    </Button>
                 </Form>
             </Navbar.Collapse>
         </Navbar>
     )
 }
-export default Header
+
