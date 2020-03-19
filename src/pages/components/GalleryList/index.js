@@ -31,7 +31,7 @@ function GalleryList({ category, spinner }) {
             const images = await api.get(`/pictures?category=${category}`);
             const pic = images.data.map(
                 image =>
-                    "https://photographercorner-api.herokuapp.com/" +
+                    "https://photographercorner-api.herokuapp.com" +
                     image.picture_url
             );
             setData(pic);
