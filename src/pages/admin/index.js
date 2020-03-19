@@ -5,7 +5,7 @@ import {Form, Button, Alert} from 'react-bootstrap'
 import api from './service/api'
 import {FaCamera, FaUserCog} from 'react-icons/fa'
 import './styles.css'
-export default function Admin(){
+export default function Admin({history}){
 
     const [alertVisible, setAlertVisible] = useState('none')
     const [variant, setVariant] = useState('')
@@ -20,14 +20,29 @@ export default function Admin(){
         }else{
             
             const response = await api.post('/admin',{user, pass})
-            console.log(response.data)
+            const usuario = response.data 
+            console.log(usuario)
+            if(usuario){
+                const {user, email,name} = usuario
+                localStorage.setItem('user', user)
+                localStorage.setItem('email', email)
+                localStorage.setItem('name', name)
+                window.location.reload(true); 
+                history.push('/')
+            }else{
+                setVariant("danger")
+                setMessage("Ops!! Por favor, verifique os dados inserídos e tente novamente! ;)")
+                setAlertVisible('block')
+            }
         }
         
     }
 
     useEffect(()=>{
-        
-    }, [])
+        if(localStorage.getItem('user')){
+            history.push('/')
+        }
+    }, [history])
     return(
         <>
             <div className="loginFormBody">
