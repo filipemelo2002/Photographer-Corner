@@ -1,128 +1,34 @@
-.fullScreenFrame {
-    background-color: #27282b95;
-    position: fixed;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    top: 0;
+.pictureGrid{
+  display: grid;
+  margin-top: 10vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  align-items: center;
+  justify-items: center;
 }
-.fullScreenFrame > div {
-    position: relative;
-    display: inline-block;
+.pictureGrid>div>.image{
+  position: relative;
+  top:0;
+  left:0;
 }
-.fullScreenFrame > div > span {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-    background: #00000097;
-    cursor: pointer;
+.pictureGrid>div>.watermark{
+  position: absolute;
+  z-index: 50;
 }
-.fullScreenFrame > div > img {
-    max-width: 900px;
-    max-height: 700px;
+@media (max-width:1136px){
+  .pictureGrid{
+    grid-template-columns: 1fr 1fr;
+  }
 }
-@media (max-width: 1200px) {
-    .fullScreenFrame > div > img {
-        width: 70%;
-    }
-}
-@media (max-width: 900px) {
-    .fullScreenFrame > div > img {
-        width: 100%;
-    }
-}
-.gallery {
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    column-gap: 12px;
-    row-gap: 12px;
-}
-.imgFrame,
-.addFrame,
-.addFrame {
-    width: 350px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.addFrame {
-    background-color: #373940;
-    color: white;
-    width: 100%;
-    min-width: 350px;
-    min-height: 230px;
+@media (max-width:758px){
+  .pictureGrid{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    height: 100%;
-    font-size: 1vw;
-    transition: background-color ease-in 0.2s;
-}
-.addFrame > input {
-    cursor: pointer;
-}
-.addFrame:hover {
-    background-color: #27282b;
-}
-.imgFrame > div {
-    background-color: #2b79a770;
-    color: white;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    height: 100%;
-    opacity: 0;
-    align-items: center;
-    justify-content: center;
-    transition: opacity ease-in 0.2s;
-    display: flex;
-}
-.actionIcon {
-    font-size: 100px;
-    cursor: pointer;
-    align-self: center;
-}
-.deleteIcon {
-    font-size: 70px;
+    align-content: center;
+    justify-items: center;
+  }
+  .pictureGrid>div>img{
+    margin-top: 2vh;
+  }
 }
 
-.imgFrame > div:hover {
-    opacity: 1;
-}
-@media (max-width: 1400px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 1100px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 1050px) {
-    .gallery {
-        grid-template-columns: 2fr 2fr;
-        column-gap: 20px;
-    }
-}
-@media (max-width: 700px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
