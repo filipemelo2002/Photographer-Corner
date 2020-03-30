@@ -17,13 +17,13 @@ export default function Admin({ history }) {
       setMessage("Ops!! Por favor, preencha todos os campos ;)");
       setAlertVisible("block");
     } else {
-      const response = await api.post("/sessions", { user, pass });
-      const usuario = response.data;
-      if (usuario) {
+      try {
+        const response = await api.post("/sessions", { user, pass });
+        const usuario = response.data;
         localStorage.setItem("adminId", usuario.admin_authorization);
         window.location.reload(true);
         history.push("/");
-      } else {
+      } catch (err) {
         setVariant("danger");
         setMessage(
           "Ops!! Por favor, verifique os dados inserídos e tente novamente! ;)"
