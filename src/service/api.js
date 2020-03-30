@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://photographercorner-api.herokuapp.com"
+  baseURL: "http://localhost:3100"
 });
 
 export default api;
