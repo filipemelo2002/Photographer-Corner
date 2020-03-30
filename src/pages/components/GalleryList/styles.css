@@ -1,4 +1,4 @@
-.pictureGrid{
+.pictureGrid {
   display: grid;
   margin-top: 10vh;
   grid-template-columns: repeat(3, 1fr);
@@ -6,29 +6,36 @@
   align-items: center;
   justify-items: center;
 }
-.pictureGrid>div>.image{
+.imageFrame {
   position: relative;
-  top:0;
-  left:0;
 }
-.pictureGrid>div>.watermark{
+
+.pictureGrid > div > .watermark {
   position: absolute;
   z-index: 50;
 }
-@media (max-width:1136px){
-  .pictureGrid{
+.imageFrame > .deleteButton {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0;
+  background-color: #00000050;
+  transition: opacity 0.3s ease-in;
+}
+.imageFrame > .deleteButton:hover {
+  opacity: 1;
+}
+@media (max-width: 1136px) {
+  .pictureGrid {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-width:758px){
-  .pictureGrid{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-items: center;
-  }
-  .pictureGrid>div>img{
-    margin-top: 2vh;
+@media (max-width: 758px) {
+  .pictureGrid {
+    grid-template-columns: 1fr;
   }
 }
-
