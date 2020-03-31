@@ -22,7 +22,6 @@ export default function Ensaios() {
     total
   ]);
   async function fetchData() {
-    console.log(page);
     const response = await api.get(`/pictures/${category}?page=${page}`);
     setPictures(response.data.pictures);
     setTotal(response.data.total);
@@ -56,7 +55,9 @@ export default function Ensaios() {
   }
   function myOnClick(pic) {
     setToggleFullscreen(!toggleFullscreen);
-    setClickedImage(`http://localhost:3100${pic.picture_url}`);
+    setClickedImage(
+      `https://photographercorner-api.herokuapp.com${pic.picture_url}`
+    );
   }
   return (
     <PictureContext.Provider value={{ addNewPicture, deletePicture, category }}>

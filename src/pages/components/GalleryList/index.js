@@ -30,7 +30,7 @@ export default function GalleryList({ pictures, fullScreenClick }) {
             className="watermark"
           />
           <img
-            src={`http://localhost:3100${pic.picture_url}`}
+            src={`https://photographercorner-api.herokuapp.com${pic.picture_url}`}
             width="350px"
             alt="loaded"
             className="image"
