@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { Navbar, Nav, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./styles.css";
-
-export default function Header() {
-  const [name, setName] = useState("Administrador");
-  const [buttonType, setButtonType] = useState("outline-dark");
+import HeaderContext from "../../context";
+export default function Header({
+  btnText = "Administrador",
+  btnStyles = "outline-dark"
+}) {
+  const { buttonStyles } = useContext(HeaderContext);
   function handleButtonClick() {
     if (localStorage.getItem("adminId")) {
       localStorage.clear();
       buttonStyles();
     }
   }
-  function buttonStyles() {
-    if (localStorage.getItem("adminId")) {
-      setName("Sair");
-      setButtonType("outline-danger");
-    } else {
-      setName("Administrador");
-      setButtonType("outline-dark");
-    }
-  }
+
   useEffect(() => {
     buttonStyles();
   }, []);
@@ -44,12 +38,12 @@ export default function Header() {
         </Nav>
         <Form inline>
           <Button
-            variant={buttonType}
+            variant={btnStyles}
             as={Link}
             to="/admin"
             onClick={() => handleButtonClick()}
           >
-            {name}
+            {btnText}
           </Button>
         </Form>
       </Navbar.Collapse>
