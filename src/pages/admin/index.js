@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import { Form, Button, Alert } from "react-bootstrap";
 
 import api from "../../service/api";
 import { FaCamera, FaUserCog } from "react-icons/fa";
 import "./styles.css";
+
+import HeaderContext from "../context";
+
 export default function Admin({ history }) {
   const [alertVisible, setAlertVisible] = useState("none");
   const [variant, setVariant] = useState("");
   const [alertMessage, setMessage] = useState("");
   const [user, setUser] = useState("");
   const [pass, setPass] = useState("");
+
+  const { buttonStyles } = useContext(HeaderContext);
   async function handleSignIn() {
     if (user.length === 0 || pass.length === 0) {
       setVariant("warning");
@@ -21,8 +26,8 @@ export default function Admin({ history }) {
         const response = await api.post("/sessions", { user, pass });
         const usuario = response.data;
         localStorage.setItem("adminId", usuario.admin_authorization);
-        window.location.reload(true);
         history.push("/");
+        buttonStyles();
       } catch (err) {
         setVariant("danger");
         setMessage(
