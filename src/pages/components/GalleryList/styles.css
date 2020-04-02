@@ -8,8 +8,13 @@
 }
 .imageFrame {
   position: relative;
+  cursor: grab;
 }
-
+.imageFrame:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
 .pictureGrid > div > .watermark {
   position: absolute;
   z-index: 50;
