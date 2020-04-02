@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo } from "react";
-
+import React, { useState, useEffect, useMemo, useCallback } from "react";
+import produce from "immer";
 import Spinner from "react-bootstrap/Spinner";
 import GalleryList from "../components/GalleryList";
 import FullScreenImager from "../components/FullScreenImager";
@@ -8,6 +8,7 @@ import "./styles.css";
 
 import PictureContext from "../context";
 export default function Eventos() {
+  const category = "eventos";
   const [toggleFullscreen, setToggleFullscreen] = useState(false);
   const [pictures, setPictures] = useState([]);
   const [total, setTotal] = useState(0);
@@ -21,19 +22,31 @@ export default function Eventos() {
     page,
     total
   ]);
-  async function fetchData() {
-    const response = await api.get(`/pictures/${category}?page=${page}`);
-    setPictures(response.data.pictures);
-    setTotal(response.data.total);
-  }
 
+  function movePicture(from, to) {
+    setPictures(
+      produce(pictures, draft => {
+        const dragged = draft[from];
+        draft.splice(from, 1);
+        draft.splice(to, 0, dragged);
+      })
+    );
+  }
+  const fetchData = useCallback(() => {
+    async function fetchPictures() {
+      const response = await api.get(`/pictures/${category}?page=${page}`);
+      setPictures(response.data.pictures);
+      setTotal(response.data.total);
+    }
+    fetchPictures();
+  }, [category, page]);
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
   useEffect(() => {
     fetchData();
-  }, [page]);
-  const category = "eventos";
+  }, [page, fetchData]);
+
   function addNewPicture(newPic) {
     //console.log(newPic);
     setPictures([...pictures, newPic]);
@@ -47,7 +60,6 @@ export default function Eventos() {
     setPage(page + 1);
   }
   async function deletePicture(pic) {
-    console.log(pic.picture_id);
     await api.delete(`/pictures/${pic.picture_id}/${pic.picture}`);
     setPictures(
       pictures.filter(newPics => newPics.picture_id !== pic.picture_id)
@@ -60,7 +72,9 @@ export default function Eventos() {
     );
   }
   return (
-    <PictureContext.Provider value={{ addNewPicture, deletePicture, category }}>
+    <PictureContext.Provider
+      value={{ addNewPicture, deletePicture, category, movePicture }}
+    >
       <div className="galeryContent">
         <h1>Eventos</h1>
         <Spinner
