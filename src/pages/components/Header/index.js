@@ -17,7 +17,7 @@ export default function Header({
 
   useEffect(() => {
     buttonStyles();
-  }, []);
+  }, [buttonStyles]);
   return (
     <Navbar bg="light" collapseOnSelect expand="lg" className="menu">
       <Navbar.Brand href="/" className="brand">
